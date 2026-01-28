@@ -1,0 +1,88 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+
+}
+
+
+.trainers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.trainer-card {
+    background: #ffffff;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+    flex: 1 1 calc(33.333% - 2rem);
+    max-width: calc(33.333% - 2rem);
+    min-width: 250px;
+}
+
+.trainer-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+}
+
+.trainer-image {
+    width: 130px;
+    height: 130px;
+    border-radius: 30%;
+    border: 3px solid #7a22df;
+    margin-bottom: 1rem;
+}
+
+.trainer-info {
+    text-align: center;
+}
+
+.trainer-name {
+    font-size: 1.3rem;
+    color: #111;
+}
+
+.trainer-region,
+.trainer-badges {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.trainer-status {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+
+
+.status-active { background: linear-gradient(135deg, #2fee09, #2eb90b) }
+.status-champion { background:linear-gradient( #f59e0b,  #c07a00); }
+
+@media screen and (max-width: 768px) {
+    .trainer-card {
+        flex: 1 1 calc(50% - 1.5rem);
+        max-width: calc(50% - 1.5rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .trainer-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
